@@ -1,0 +1,246 @@
+*{
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+}
+
+.gameScreen{
+	background-image: url(flappy.png);
+	width: 288px;
+	height: 511px;
+	background-position: 0px 0px;
+	overflow: hidden;
+	position: relative;
+}
+
+.flappy{
+	background-image: url(flappy.png);
+	width: 34px;
+	height: 24px;
+    left: 127px;
+    top: 130px;
+	position: relative;
+	background-position: -174px -982px;
+    z-index: 10;
+	
+	animation-duration: 0.7s;
+	animation-name: flap;
+	animation-iteration-count: infinite;
+	animation-timing-function: step-end;
+
+    -webkit-animation-duration: 0.7s;
+	-webkit-animation-name: flap;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: step-end;
+}
+
+@keyframes flap {
+	from{
+		background-position: -174px -982px;
+	}
+	25%{
+		background-position: -230px -658px;
+	}
+	50%{
+		background-position: -230px -710px;
+	}
+	75%{
+		background-position: -230px -658px;
+	}
+}
+
+@-webkit-keyframes flap {
+	from{
+		background-position: -174px -982px;
+	}
+	25%{
+		background-position: -230px -658px;
+	}
+	50%{
+		background-position: -230px -710px;
+	}
+	75%{
+		background-position: -230px -658px;
+	}
+}
+
+.pipeTop
+{
+	background-image: url(flappy.png);
+	width: 52px;
+	height: 0px;
+	position: absolute;
+	background-position: -112px -646px;
+}
+
+.pipeBottom
+{
+	background-image: url(flappy.png);
+	width: 52px;
+	height: 0px;
+    top: 86px;
+	position: absolute;
+	background-position: -168px -646px;
+}
+
+.floor
+{
+	background-image: url(flappy.png);
+	width: 288px;
+	height: 112px;
+	position: absolute;
+	top: 407px;
+	background-position: -584px 0px;
+
+    animation-duration: 2.34s;
+    animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+    -webkit-animation-duration: 2.34s;
+    -webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+.frontFloor
+{
+	animation-name: frontFloorMove;
+	-webkit-animation-name: frontFloorMove;
+}
+
+.backFloor
+{
+	animation-name: backFloorMove;
+	-webkit-animation-name: backFloorMove;
+}
+
+@keyframes frontFloorMove {
+	from{
+        background-position: -584px 0px;
+        width: 288px;
+	}
+	100%{
+        background-position: -872px 0px;
+        width: 0px;
+	}
+}
+
+@keyframes backFloorMove {
+	from{
+		-webkit-transform: translateX(288px);
+		transform: translateX(288px);
+        width: 0px;
+	}
+	100%{
+		-webkit-transform: translateX(0px);
+		transform: translateX(0px);
+        width: 288px;
+	}
+}
+
+@-webkit-keyframes frontFloorMove {
+	from{
+        background-position: -584px 0px;
+        width: 288px;
+	}
+	100%{
+        background-position: -872px 0px;
+        width: 0px;
+	}
+}
+
+@-webkit-keyframes backFloorMove {
+	from{
+		-webkit-transform: translateX(288px);
+        width: 0px;
+	}
+	100%{
+		-webkit-transform: translateX(0px);
+        width: 288px;
+	}
+}
+
+.highscore{
+    top: 200px;
+    left: 144px;
+    width: 100px;
+    height: 50px;
+}
+
+.restartButton{
+    top: 250px;
+    left: 144px;
+    width: 50px;
+    height: 50px;
+}
+
+.title{
+    background-image: url(flappy.png);
+    background-position: -701px -182px;
+    width: 179px;
+    height: 48px;
+    top: 50px;
+    left: 54px;
+    position: absolute;
+    z-index: 100;
+}
+
+.startButton{
+    background-image: url(flappy.png);
+    background-position: -708px -236px;
+    width: 108px; /* 4px drop shadow */
+    height: 62px; /* 4px drop shadow */
+    top: 200px;
+    left: 90px;
+    position: absolute;
+    z-index: 100;
+}
+
+.numbers{
+    background-image: url(flappy.png);
+    width: 28px;
+    height: 36px;
+    top: 20px;
+    display: none;
+    position: absolute;
+    z-index: 100;
+}
+
+.number0 {
+    background-position: -990px -120px;
+}
+
+.number1 {
+    width: 20px;
+    background-position: -270px -910px;
+}
+.number2 {
+    background-position: -582px -320px;
+}
+
+.number3 {
+    background-position: -610px -320px;
+}
+
+.number4 {
+    background-position: -638px -320px;
+}
+
+.number5 {
+    background-position: -666px -320px;
+}
+
+.number6 {
+    background-position: -582px -368px;
+}
+
+.number7 {
+    background-position: -610px -368px;
+}
+
+.number8 {
+    background-position: -638px -368px;
+}
+
+.number9 {
+    background-position: -666px -368px;
+}
